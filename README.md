@@ -3,6 +3,10 @@
 A plugin to do a web search via fish.
 Inspired by [oh-my-zsh/web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
 
+## Requirement
+
+- [xdg-utils](https://github.com/freedesktop/xdg-utils)
+
 ## Installation
 
 Install with [Fisher](https://github.com/jorgebucaran/fisher):
