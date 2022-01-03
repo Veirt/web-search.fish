@@ -21,6 +21,20 @@ fisher install veirt/web-search.fish
 web-search google nyahello, world
 ```
 
+You can also define aliases in your fish config:
+
+```fish
+alias google="web-search google"
+alias stackoverflow="web-search stackoverflow"
+alias github="web-search github"
+```
+
+And now, you can also do it like this:
+
+```sh
+google nyahello, world
+```
+
 Available search contexts:
 
 | Context         | URL                                      |
