@@ -56,6 +56,15 @@ function web-search -d "Search on web"
 
     if test (count $argv) -gt 1
         set query (string escape --style=url $argv[2..])
-        xdg-open "$url$query"
+        set -l open_cmd
+
+        switch (uname)
+            case Linux
+                set open_cmd xdg-open
+            case Darwin
+                set open_cmd open
+        end
+
+        eval "$open_cmd '$url$query'"
     end
 end
