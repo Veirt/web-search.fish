@@ -60,11 +60,11 @@ function web-search -d "Search on web"
 
         switch (uname)
             case Linux
-                set open_cmd xdg-open
+                set open_cmd "nohup xdg-open"
             case Darwin
-                set open_cmd open
+                set open_cmd "open"
         end
 
-        eval "$open_cmd '$url$query'"
+        eval "$open_cmd '$url$query' &> /dev/null &"
     end
 end
