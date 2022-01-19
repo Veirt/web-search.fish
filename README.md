@@ -1,5 +1,7 @@
 # web-search.fish
 
+![Demo](./demo.gif)
+
 A plugin to do a web search via fish.
 Inspired by [oh-my-zsh/web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
 
