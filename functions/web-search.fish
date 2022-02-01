@@ -65,6 +65,6 @@ function web-search -d "Search on web"
                 set open_cmd "open"
         end
 
-        eval "$open_cmd '$url$query' &> /dev/null &"
+        eval "$open_cmd '$url$query' &> /dev/null & disown"
     end
 end
