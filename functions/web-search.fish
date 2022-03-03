@@ -48,6 +48,12 @@ function web-search -d "Search on web"
         case scholar
             set url "https://scholar.google.com/scholar?q="
 
+        case nixpkgs
+            set url "https://search.nixos.org/packages?query="
+
+        case nixoptions
+            set url "https://search.nixos.org/options?query="
+
         ### DEFAULT
         case '*'
             echo "'$argv[1]' is not supported."
