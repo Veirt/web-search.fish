@@ -63,6 +63,12 @@ function web-search -d "Search on web"
         case gpo
             set url "https://gpo.zugaina.org/Search?search="
 
+        case searx
+            set url "https://searx.org/search?q="
+
+        case brave
+            set url "https://search.brave.com/search?q="
+
         ### DEFAULT
         case '*'
             echo "'$argv[1]' is not supported."
