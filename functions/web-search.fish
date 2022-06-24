@@ -3,6 +3,9 @@ function web-search -d "Search on web"
         case google
             set url "https://www.google.com/search?q="
 
+        case youtube
+            set url "https://www.youtube.com/results?search_query="
+
         case bing
             set url "https://www.bing.com/search?q="
 
@@ -53,6 +56,12 @@ function web-search -d "Search on web"
 
         case nixoptions
             set url "https://search.nixos.org/options?query="
+
+        case aur
+            set url "https://aur.archlinux.org/packages?K="
+
+        case gpo
+            set url "https://gpo.zugaina.org/Search?search="
 
         ### DEFAULT
         case '*'
