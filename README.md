@@ -65,6 +65,33 @@ Available search contexts:
 | `searx`         | `https://searx.org/search?q=`                   |
 | `brave`         | `https://search.brave.com/search?q=`            |
 
+## Custom Search
+
+Additionally, you can set up a custom search with a different URL by defining
+a new environment variable with a `WEB_SEARCH_` prefix and a unique context name.
+Simply set the URL you desire as the value for this new environment variable.
+
+For example, if you want to make a search to the URL
+`https://dictionary.cambridge.org/dictionary/english/` with the context `dict`, you
+can use the following command or put it directly in your `config.fish`:
+
+```sh
+set -gx WEB_SEARCH_dict 'https://dictionary.cambridge.org/dictionary/english/'
+```
+
+You can now search with:
+```sh
+web-search dict word
+
+```
+
+Or, with an alias:
+```sh
+alias dict='web-search dict'
+dict word
+```
+
+
 ## Credits
 
 - [oh-my-zsh/web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search). Licensed under [MIT](https://choosealicense.com/licenses/mit/)
