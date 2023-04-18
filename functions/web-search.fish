@@ -74,8 +74,11 @@ function web-search -d "Search on web"
             set custom_search
             set custom_urls
             for var in (env | grep ^WEB_SEARCH)
-                set -a custom_search (echo "$var" | awk -F= '{print $1}' | string sub -s 12)
-                set -a custom_urls (echo "$var" | awk -F= '{print $2}')
+                set -l context (string split -m 1 = $var)[1]
+                set -a custom_search ( echo "$context" | string sub -s 12)
+
+                set -l url (string split -m 1 = $var)[2]
+                set -a custom_urls $url
             end
 
             if contains $argv[1] $custom_search
