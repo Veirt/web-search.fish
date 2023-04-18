@@ -71,21 +71,37 @@ function web-search -d "Search on web"
 
         ### DEFAULT
         case '*'
-            echo "'$argv[1]' is not supported."
-            return 1
+            set custom_search
+            set custom_urls
+            for var in (env | grep ^WEB_SEARCH)
+                set -a custom_search (echo "$var" | awk -F= '{print $1}' | string sub -s 12)
+                set -a custom_urls (echo "$var" | awk -F= '{print $2}')
+            end
+
+            if contains $argv[1] $custom_search
+                set -l index (contains -i $argv[1] $custom_search)
+                set url $custom_urls[$index]
+            else
+                echo "'$argv[1]' is not supported."
+                return 1
+            end               
     end
 
-    if test (count $argv) -gt 1
-        set query (string escape --style=url $argv[2..])
-        set -l open_cmd
 
-        switch (uname)
-            case Linux
-                set open_cmd "nohup xdg-open"
-            case Darwin
-                set open_cmd "open"
-        end
-
-        eval "$open_cmd '$url$query' &> /dev/null & disown"
+    if test (count $argv) -ge 2
+       set query (string escape --style=url $argv[2..-1])
+    else
+        set query ''
     end
+
+    set -l open_cmd
+
+    switch (uname)
+        case Linux
+            set open_cmd "nohup xdg-open"
+        case Darwin
+            set open_cmd "open"
+    end
+
+    eval "$open_cmd '$url$query' &> /dev/null & disown"
 end
