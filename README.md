@@ -7,7 +7,7 @@ Inspired by [oh-my-zsh/web-search](https://github.com/ohmyzsh/ohmyzsh/tree/maste
 
 ## Requirement
 
-- [xdg-utils](https://github.com/freedesktop/xdg-utils)
+- [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils/)
 
 ## Installation
 
