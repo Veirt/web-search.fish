@@ -92,7 +92,7 @@ function web-search -d "Search on web"
 
 
     if test (count $argv) -ge 2
-       set query (string escape --style=url $argv[2..-1])
+        set query (string escape --style=url $argv[2..-1])
     else
         set query ''
     end
