@@ -1,4 +1,4 @@
-set -l contexts google youtube bing yahoo duckduckgo startpage yandex github baidu ecosia goodreads qwant givero stackoverflow wolframalpha archive scholar nixpkgs nixoptions aur gpo searx brave
+set -l contexts google youtube bing yahoo duckduckgo startpage yandex github baidu ecosia goodreads qwant givero stackoverflow wolframalpha archive scholar nixpkgs nixoptions aur gpo searx brave urbandict
 
 for var in (env | grep ^WEB_SEARCH)
     set -l context (string split -m 1 = $var)[1]

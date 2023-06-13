@@ -69,6 +69,9 @@ function web-search -d "Search on web"
         case brave
             set url "https://search.brave.com/search?q="
 
+        case urbandict
+            set url "https://www.urbandictionary.com/define.php?term="
+
         ### DEFAULT
         case '*'
             set custom_search
