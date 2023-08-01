@@ -7,7 +7,7 @@ Inspired by [oh-my-zsh/web-search](https://github.com/ohmyzsh/ohmyzsh/tree/maste
 
 ## Requirement
 
-- [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils/)
+- `xdg-open(1)`: [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils/)
 
 ## Installation
 
@@ -39,31 +39,32 @@ google nyahello, world
 
 Available search contexts:
 
-| Context         | URL                                             |
-| --------------- | ----------------------------------------------- |
-| `google`        | `https://www.google.com/search?q=`              |
-| `youtube`       | `https://www.youtube.com/results?search_query=` |
-| `bing`          | `https://www.bing.com/search?q=`                |
-| `yahoo`         | `https://search.yahoo.com/search?p=`            |
-| `duckduckgo`    | `https://www.duckduckgo.com/?q=`                |
-| `startpage`     | `https://www.startpage.com/do/search?q=`        |
-| `yandex`        | `https://yandex.ru/yandsearch?text=`            |
-| `github`        | `https://github.com/search?q=`                  |
-| `baidu`         | `https://www.baidu.com/s?wd=`                   |
-| `ecosia`        | `https://www.ecosia.org/search?q=`              |
-| `goodreads`     | `https://www.goodreads.com/search?q=`           |
-| `qwant`         | `https://www.qwant.com/?q=`                     |
-| `givero`        | `https://www.givero.com/search?q=`              |
-| `stackoverflow` | `https://stackoverflow.com/search?q=`           |
-| `wolframalpha`  | `https://wolframalpha.com/input?i=`             |
-| `archive`       | `https://web.archive.org/web/*/`                |
-| `scholar`       | `https://scholar.google.com/scholar?q=`         |
-| `nixpkgs`       | `https://search.nixos.org/packages?query=`      |
-| `nixoptions`    | `https://search.nixos.org/options?query=`       |
-| `aur`           | `https://aur.archlinux.org/packages?K=`         |
-| `gpo`           | `https://gpo.zugaina.org/Search?search=`        |
-| `searx`         | `https://searx.org/search?q=`                   |
-| `brave`         | `https://search.brave.com/search?q=`            |
+| Context         | URL                                                |
+| --------------- | -------------------------------------------------- |
+| `google`        | `https://www.google.com/search?q=`                 |
+| `youtube`       | `https://www.youtube.com/results?search_query=`    |
+| `bing`          | `https://www.bing.com/search?q=`                   |
+| `yahoo`         | `https://search.yahoo.com/search?p=`               |
+| `duckduckgo`    | `https://www.duckduckgo.com/?q=`                   |
+| `startpage`     | `https://www.startpage.com/do/search?q=`           |
+| `yandex`        | `https://yandex.ru/yandsearch?text=`               |
+| `github`        | `https://github.com/search?q=`                     |
+| `baidu`         | `https://www.baidu.com/s?wd=`                      |
+| `ecosia`        | `https://www.ecosia.org/search?q=`                 |
+| `goodreads`     | `https://www.goodreads.com/search?q=`              |
+| `qwant`         | `https://www.qwant.com/?q=`                        |
+| `givero`        | `https://www.givero.com/search?q=`                 |
+| `stackoverflow` | `https://stackoverflow.com/search?q=`              |
+| `wolframalpha`  | `https://wolframalpha.com/input?i=`                |
+| `archive`       | `https://web.archive.org/web/*/`                   |
+| `scholar`       | `https://scholar.google.com/scholar?q=`            |
+| `nixpkgs`       | `https://search.nixos.org/packages?query=`         |
+| `nixoptions`    | `https://search.nixos.org/options?query=`          |
+| `aur`           | `https://aur.archlinux.org/packages?K=`            |
+| `gpo`           | `https://gpo.zugaina.org/Search?search=`           |
+| `searx`         | `https://searx.org/search?q=`                      |
+| `brave`         | `https://search.brave.com/search?q=`               |
+| `urbandict`     | `https://www.urbandictionary.com/define.php?term=` |
 
 ## Custom Search
 
@@ -80,17 +81,17 @@ set -gx WEB_SEARCH_dict 'https://dictionary.cambridge.org/dictionary/english/'
 ```
 
 You can now search with:
+
 ```sh
 web-search dict word
-
 ```
 
 Or, with an alias:
+
 ```sh
 alias dict='web-search dict'
 dict word
 ```
-
 
 ## Credits
 
@@ -103,10 +104,15 @@ dict word
 Run this command in your shell. For example, if you want to change it to Firefox:
 
 ```sh
-xdg-settings set default-url-scheme-handler http firefox.desktop
+xdg-settings set default-web-browser firefox.desktop
 ```
 
-You can replace `firefox.desktop` with whatever the name of your browser desktop entry.
+You can replace `firefox.desktop` with whatever the name of your browser desktop entry:
+
+- Google Chrome: `google-chrome.desktop`
+- Chromium: `chromium.desktop`
+
+You can find your browser's desktop entry in `/usr/share/applications/` or in `~/.local/share/applications/`
 
 ## License
 
