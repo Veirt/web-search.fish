@@ -1,4 +1,8 @@
-set -l contexts google youtube bing yahoo duckduckgo startpage yandex github baidu ecosia goodreads qwant givero stackoverflow wolframalpha archive scholar nixpkgs nixoptions aur gpo searx brave urbandict
+# access _web_search_fish_engines to get the list of engines
+for i in (seq 1 2 (count $_web_search_fish_engines))
+    set -l context $_web_search_fish_engines[$i]
+    set -a contexts "$context"
+end
 
 for custom_env in (env | grep ^WEB_SEARCH)
     set -l context (string split -m 1 = $custom_env)[1]
