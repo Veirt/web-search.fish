@@ -24,3 +24,4 @@ jobs:
         run: |
           fisher install $GITHUB_WORKSPACE
           fishtape tests/*
+        shell: fish {0}
