@@ -1,5 +1,3 @@
-status is-interactive || exit
-
 # loading custom engines won't work here. conf.d/*.fish is sourced before the config.fish
 set -g _web_search_fish_engines \
     google 'https://www.google.com/search?q=' \
