@@ -17,10 +17,10 @@ jobs:
       - name: Install Fisher and Fishtape
         run: |
           curl -sL https://git.io/fisher | source
-          fisher install $GITHUB_WORKSPACE jorgebucaran/fishtape
+          fisher install jorgebucaran/fishtape
         shell: fish {0}
 
       - name: Run Tests
         run: |
-          && fisher install $GITHUB_WORKSPACE
+          fisher install $GITHUB_WORKSPACE
           fishtape tests/*
