@@ -17,7 +17,7 @@ jobs:
       - name: Install Fisher and Fishtape
         run: |
           curl -sL https://git.io/fisher | source
-          fisher install jorgebucaran/fishtape
+          fisher install jorgebucaran/fisher jorgebucaran/fishtape
         shell: fish {0}
 
       - name: Run Tests
