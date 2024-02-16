@@ -65,6 +65,11 @@ Available search contexts:
 | `searx`         | `https://searx.org/search?q=`                      |
 | `brave`         | `https://search.brave.com/search?q=`               |
 | `urbandict`     | `https://www.urbandictionary.com/define.php?term=` |
+| `deepl`         | `https://www.deepl.com/translator#auto/auto/`      |
+| `dockerhub`     | `https://hub.docker.com/search?q=`                 |
+| `npmpkg`        | `https://www.npmjs.com/search?q=`                  |
+| `packagist`     | `https://packagist.org/?query=`                    |
+| `gopkg`         | `https://pkg.go.dev/search?m=package&q=`           |
 
 ## Custom Search
 
