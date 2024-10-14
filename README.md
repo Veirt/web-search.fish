@@ -11,10 +11,16 @@ Inspired by [oh-my-zsh/web-search](https://github.com/ohmyzsh/ohmyzsh/tree/maste
 
 ## Installation
 
-Install with [Fisher](https://github.com/jorgebucaran/fisher):
+Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
 
 ```sh
 fisher install veirt/web-search.fish
+```
+
+or manual installation:
+
+```sh
+curl -sL https://raw.githubusercontent.com/Veirt/web-search.fish/main/install.fish | fish
 ```
 
 ## Usage
